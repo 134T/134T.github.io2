@@ -50,70 +50,14 @@
 
 
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
 
     
     
     <title>
-          
-            时间是生命
+        
+            past | 时间是生命
         
     </title>
     
@@ -261,11 +205,11 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
+    
+      <div class="post-header"> 
   <a class="post-header-title" href="/2021/08/02/past/">past</a>
   <div class="post-header-meta">
     <span>
@@ -281,14 +225,53 @@
       分类于:&nbsp;<a class="category-link" href="/categories/move-on/">move on</a>
     </span>
     
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
   </div>
 </div>   
     
 
 
 
-      
-      
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=past&url=http://example.com/2021/08/02/past/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=past&url=http://example.com/2021/08/02/past/&via=Wu Hua" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/08/02/past/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://example.com/2021/08/02/past/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2021/08/02/past/&title=past" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=时间是生命&title=past&summary=干就完事&pics=http://example.com/null&url=http://example.com/2021/08/02/past/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://example.com/2021/08/02/past/&text=past" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
   <div class="post-tags">
     
       <i class="iconfont icon-tag">
@@ -297,117 +280,81 @@
     
   </div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20210802215328266.png" alt="image-20210802215328266"></p>
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20210802215328266.png" alt="image-20210802215328266"></p>
 <p>​                            想不到当初自己这么有志气，尽管显得有点傻气。经过5年时间，我到底是如何变成如今这模样的。</p>
-<p>​                    我想起了盟军总司令麦克阿瑟将军在西点军校的最后一次演讲说的一句话：<strong>老兵不死，他们只会凋零。</stro...
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/08/02/past/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/08/02/time/">time</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-08-02
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-08-02
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
-    </span>
-    
+<p>​                    我想起了盟军总司令麦克阿瑟将军在西点军校的最后一次演讲说的一句话：<strong>老兵不死，他们只会凋零。</strong></p>
+<p><img src="E:\photops\time\seven.png"></p>
+<p>​                            年轻总是那么美好，如果说什么人最幸福。我回答是：<strong>未经历风雨的年轻人</strong></p>
+<p><img src="E:\photops\time\eight.png"></p>
+<p>​                            二十岁人了才想出这些肤浅的常识，为此而沾沾自喜，足以见当时我的世界是极为单纯与简单的。带着如此</p>
+<p>​                    单纯的想法去面对残酷而又复杂的社会，可想而知，势必要伤痕累累。</p>
+<p><img src="E:\photops\time\nine.png"></p>
+<p>​                            终于意识到思想的误区了，这才让我看到我现在的一部分。</p>
+<h3 id="多亏了大学还有好友，让我有时间和角度去好好去审视一下自己，才不至于在面向社会时被打的找不到北。"><a href="#多亏了大学还有好友，让我有时间和角度去好好去审视一下自己，才不至于在面向社会时被打的找不到北。" class="headerlink" title="多亏了大学还有好友，让我有时间和角度去好好去审视一下自己，才不至于在面向社会时被打的找不到北。"></a>多亏了大学还有好友，让我有时间和角度去好好去审视一下自己，才不至于在面向社会时被打的找不到北。</h3>
   </div>
-</div>   
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
     
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2021/08/02/time/">
+        <span>time</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
 
 
 
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E6%97%B6%E9%97%B4/ >时间</a>
-      </i>
-    
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2021/08/02/past/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E4%BA%8F%E4%BA%86%E5%A4%A7%E5%AD%A6%E8%BF%98%E6%9C%89%E5%A5%BD%E5%8F%8B%EF%BC%8C%E8%AE%A9%E6%88%91%E6%9C%89%E6%97%B6%E9%97%B4%E5%92%8C%E8%A7%92%E5%BA%A6%E5%8E%BB%E5%A5%BD%E5%A5%BD%E5%8E%BB%E5%AE%A1%E8%A7%86%E4%B8%80%E4%B8%8B%E8%87%AA%E5%B7%B1%EF%BC%8C%E6%89%8D%E4%B8%8D%E8%87%B3%E4%BA%8E%E5%9C%A8%E9%9D%A2%E5%90%91%E7%A4%BE%E4%BC%9A%E6%97%B6%E8%A2%AB%E6%89%93%E7%9A%84%E6%89%BE%E4%B8%8D%E5%88%B0%E5%8C%97%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">多亏了大学还有好友，让我有时间和角度去好好去审视一下自己，才不至于在面向社会时被打的找不到北。</span></a></li></ol>
+      </li>
+    </ul>
   </div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <pre><code>时间是年轻人最宝贵的财富，时间是比金钱更重要的东西。
-</code></pre>
-<p>时间会被浪费，被窃取，获取世上的一切事物都需要时间。<br>闪电战就是靠速度取胜的，在敌军还没反应过来就打乱其一切部署。</p>
-          
-        </div>
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/08/02/time/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/08/02/hello-world/">Hello World</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-08-02
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;1985-10-26
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or yo...
-          
-        </div>
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/08/02/hello-world/">阅读更多</a>
-        </div>
       </div>
-    </article>
-
-
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'cc9f41748c31bcd6ace0',
+    clientSecret: '5f210c8e24211815491f17a90564a3b642905dcb',
+    repo: '134T.github.io',
+    owner: '134T',
+    admin: ['134T'],
+    id:  md5(location.pathname).split("/").pop().substring(0, 49) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+    </div>
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
@@ -455,6 +402,12 @@
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
 
