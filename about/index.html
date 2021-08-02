@@ -239,7 +239,7 @@
     repo: '134T.github.io',
     owner: '134T',
     admin: ['134T'],
-    id:  md5(location.pathname) ,
+    id:  md5(location.pathname).split("/").pop().substring(0, 49) ,
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
